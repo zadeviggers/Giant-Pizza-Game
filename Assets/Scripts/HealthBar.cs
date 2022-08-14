@@ -10,6 +10,8 @@ public class HealthBar : MonoBehaviour
     public Image HalfHeart;
     public Image FullHeart;
 
+    public float imageSize;
+
     // Components
     Canvas canvas;
 
@@ -43,6 +45,8 @@ public class HealthBar : MonoBehaviour
         // Create new children
         for (int i = 1; i <= numberOfHearts; i++)
         {
+            Vector2 position = new Vector2(i * imageSize, imageSize);
+
             Image newChild;
             if (i <= fullHearts)
             {
@@ -60,6 +64,7 @@ public class HealthBar : MonoBehaviour
                 newChild = Instantiate(EmptyHeart);
             }
             newChild.transform.SetParent(transform);
+            newChild.transform.position = position;
         }
     }
 }

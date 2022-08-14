@@ -49,7 +49,7 @@ Canvas:
   m_GameObject: {fileID: 1715164333876055247}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -116,3 +116,4 @@ MonoBehaviour:
   EmptyHeart: {fileID: 5446889423110430795, guid: 66fb35f18f9e54c03a4f434059716168, type: 3}
   HalfHeart: {fileID: 379864538553409486, guid: d4e6a04c13dde4e52bbb0bb409c13425, type: 3}
   FullHeart: {fileID: 2178352081519242234, guid: acdfe70566cff4b72b3f1268f40ace7f, type: 3}
+  imageSize: 1.01
