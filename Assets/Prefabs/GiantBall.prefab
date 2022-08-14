@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAmount: -60
+  collisionExplosionRadius: 20
+  collisionExplosionForce: 100
 --- !u!58 &6271372736416622066
 CircleCollider2D:
   m_ObjectHideFlags: 0

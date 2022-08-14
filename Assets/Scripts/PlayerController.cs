@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput < 0) horizontalMovement = horizontalMovement * -1;
 
         float verticalMovement = 0;
-        // Debug.Log(IsGrounded());
-        // if (verticalInput > 0 && IsGrounded()) verticalMovement = jumpSpeed;
+        Debug.Log(IsGrounded());
+        if (verticalInput > 0 && IsGrounded()) verticalMovement = jumpSpeed;
 
         Vector2 movement = new Vector2(horizontalMovement, verticalMovement);
 
@@ -49,11 +49,11 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    // bool IsGrounded()
-    // {
-    //     float distToGround = collider.bounds.extents.y;
-    //     return Physics2D.Raycast(transform.position, -Vector3.up, (float)(distToGround + 0.1));
-    // }
+    bool IsGrounded()
+    {
+
+        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 1f), Vector2.down, 1f, LayerMask.NameToLayer("Ground"));
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

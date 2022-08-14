@@ -103,7 +103,7 @@ MonoBehaviour:
   maxHealth: 8
   health: 4
   walkSpeed: 4500
-  jumpSpeed: 1
+  jumpSpeed: 1000
 --- !u!50 &8354973527394239252
 Rigidbody2D:
   serializedVersion: 4
