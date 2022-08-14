@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caac090f98494073b4968c170e3bdf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  startingHealth: 2
-  walkSpeed: 5000
+  maxHealth: 8
+  health: 4
+  walkSpeed: 4500
   jumpSpeed: 1
 --- !u!50 &8354973527394239252
 Rigidbody2D:
@@ -115,8 +115,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 2.6866148
+  m_UseAutoMass: 0
+  m_Mass: 2.2878828
   m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 1

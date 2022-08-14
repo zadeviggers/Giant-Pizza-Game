@@ -4,23 +4,29 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
-{
-
-    // Player health points. Each point is "half a heart".
+{    // Player health points. Each point is "half a heart".
+    public int maxHealth;
     public int health;
 
-    // Set in editor
+
+    // Variables set in Unity editor UI
     public float walkSpeed;
     public float jumpSpeed;
 
+    // Components
     private Rigidbody2D rb;
     private new Collider2D collider;
+
+    // Other controller scripts
+    HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
+
+        healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
     }
 
     // Update is called once per frame
@@ -78,13 +84,18 @@ public class PlayerController : MonoBehaviour
     void TakeDamage(int amount = 1)
     {
         health -= amount;
+
+        healthBar.UpdateHealthBar();
+
         if (health < 1)
             Die();
     }
 
     void HealDamage(int amount = 1)
     {
-        health += amount;
+        health = Mathf.Clamp(health + amount, 0, maxHealth);
+
+        healthBar.UpdateHealthBar();
     }
 
     void Die()

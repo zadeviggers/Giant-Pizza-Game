@@ -7,6 +7,7 @@ TagManager:
   - Painful
   - Healing
   - VeryPainful
+  - HealthBar
   layers:
   - Default
   - TransparentFX
