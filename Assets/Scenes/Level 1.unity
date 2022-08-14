@@ -473,6 +473,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6271372736416622061, guid: 242082a21294b4e45b29d9222ff33012, type: 3}
+      propertyPath: collisionExplosionForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271372736416622061, guid: 242082a21294b4e45b29d9222ff33012, type: 3}
+      propertyPath: collisionExplosionRadius
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6271372736416622062, guid: 242082a21294b4e45b29d9222ff33012, type: 3}
       propertyPath: m_Name
       value: GiantBall
