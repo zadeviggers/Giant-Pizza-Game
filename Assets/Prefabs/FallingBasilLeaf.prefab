@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1456740724976895392}
   - component: {fileID: 1456740724976895393}
   - component: {fileID: 8483055847511486484}
-  - component: {fileID: 6002182059787504907}
+  - component: {fileID: -6596618342601397539}
   m_Layer: 0
-  m_Name: FallingPepperoni
-  m_TagString: Painful
+  m_Name: FallingBasilLeaf
+  m_TagString: Healing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1456740724976895398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.1724057, y: 3.89715, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29492f493a1ad4e458ce311191ef01d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e00d4578d95c41c4ca1d28e005fcfc5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallAmount: {x: 0, y: -0.05, z: 0}
   destroyBelowY: -8
---- !u!58 &6002182059787504907
+--- !u!58 &-6596618342601397539
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,4 +115,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.77
+  m_Radius: 3.489031

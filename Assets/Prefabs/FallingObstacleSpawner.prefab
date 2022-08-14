@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thingsToSpawn:
-  - {fileID: 1456740724976895398, guid: b8f8949710e911d47819b48985fd5b26, type: 3}
+  - {fileID: 1456740724976895398, guid: 0eba6a4bdbdd44437b1c130a5937ba76, type: 3}
   - {fileID: 1456740724976895398, guid: b8f8949710e911d47819b48985fd5b26, type: 3}
   - {fileID: 1456740724976895398, guid: b8f8949710e911d47819b48985fd5b26, type: 3}
   - {fileID: 1456740724976895398, guid: b8f8949710e911d47819b48985fd5b26, type: 3}
