@@ -5,16 +5,16 @@ using UnityEngine;
 public class FallingIngredientBehavior : MonoBehaviour
 {
     public Vector3 fallAmount;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float destroyBelowY;
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(fallAmount);
+
+        if (transform.position.y < destroyBelowY)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: {x: 0, y: -0.05, z: 0}
+  destroyBelowY: -8
 --- !u!58 &6002182059787504907
 CircleCollider2D:
   m_ObjectHideFlags: 0

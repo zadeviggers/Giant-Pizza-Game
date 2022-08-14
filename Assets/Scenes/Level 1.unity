@@ -437,9 +437,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingObstacleSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 9128748580138572089, guid: 24f4c5f619fbaf642b9b33554c150a2b, type: 3}
-      propertyPath: spawnWidth
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24f4c5f619fbaf642b9b33554c150a2b, type: 3}
