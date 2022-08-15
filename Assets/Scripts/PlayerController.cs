@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class PlayerController : MonoBehaviour
 {    // Player health points. Each point is "half a heart".
     public int maxHealth;
@@ -20,6 +22,10 @@ public class PlayerController : MonoBehaviour
     // Other controller scripts
     HealthBar healthBar;
 
+
+    // Layer mask for ground
+    int GroundMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +33,8 @@ public class PlayerController : MonoBehaviour
         collider = GetComponent<Collider2D>();
 
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
+
+        GroundMask = 1 << LayerMask.NameToLayer("Ground");
     }
 
     // Update is called once per frame
@@ -51,8 +59,8 @@ public class PlayerController : MonoBehaviour
 
     bool IsGrounded()
     {
-
-        return Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 1f), Vector2.down, 1f, LayerMask.NameToLayer("Ground"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2f, GroundMask);
+        return hit.collider != null;
     }
 
     void OnTriggerEnter2D(Collider2D other)
