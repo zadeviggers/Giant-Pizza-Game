@@ -9,6 +9,7 @@ public class IngredienceSpawner : MonoBehaviour
     public float spawnWidth;
     private float spawnOffsetDistance;
 
+    public bool vertical = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +25,18 @@ public class IngredienceSpawner : MonoBehaviour
 
         GameObject thingToSpawn = thingsToSpawn[indexToSpawn];
 
-        float spawnX = Random.Range(transform.position.x - spawnOffsetDistance, transform.position.x + spawnOffsetDistance);
-        Vector2 spawnPosition = new Vector2(spawnX, transform.position.y);
+        Vector2 spawnPosition;
+
+        if (vertical)
+        {
+            float spawnY = Random.Range(transform.position.y - spawnOffsetDistance, transform.position.y + spawnOffsetDistance);
+            spawnPosition = new Vector2(transform.position.x, spawnY);
+        }
+        else
+        {
+            float spawnX = Random.Range(transform.position.x - spawnOffsetDistance, transform.position.x + spawnOffsetDistance);
+            spawnPosition = new Vector2(spawnX, transform.position.y);
+        }
 
         Instantiate(thingToSpawn, spawnPosition, Quaternion.identity);
 
@@ -43,9 +54,17 @@ public class IngredienceSpawner : MonoBehaviour
 
     void DrawSpawnDebugLine()
     {
-        Vector2 leftmostPoint = new Vector2(transform.position.x - spawnOffsetDistance, transform.position.y);
-        Vector2 rightmostPoint = new Vector2(transform.position.x + spawnOffsetDistance, transform.position.y);
-        Debug.DrawLine(leftmostPoint, rightmostPoint, Color.green, 1);
-
+        if (vertical)
+        {
+            Vector2 topmostPoint = new Vector2(transform.position.x, transform.position.y - spawnOffsetDistance);
+            Vector2 bottommostPoint = new Vector2(transform.position.x, transform.position.y + spawnOffsetDistance);
+            Debug.DrawLine(topmostPoint, bottommostPoint, Color.green, 1);
+        }
+        else
+        {
+            Vector2 leftmostPoint = new Vector2(transform.position.x - spawnOffsetDistance, transform.position.y);
+            Vector2 rightmostPoint = new Vector2(transform.position.x + spawnOffsetDistance, transform.position.y);
+            Debug.DrawLine(leftmostPoint, rightmostPoint, Color.green, 1);
+        }
     }
 }
