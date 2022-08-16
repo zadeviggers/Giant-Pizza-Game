@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 8
-  health: 5
+  health: 8
   walkSpeed: 4500
   jumpSpeed: 250
   collisionExplosionRadius: 20

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5637268971183097909}
   - component: {fileID: 5637268971183097908}
   - component: {fileID: 5637268971183097904}
+  - component: {fileID: 9828251596032786}
   m_Layer: 0
   m_Name: rock-pile
   m_TagString: VeryPainful
@@ -131,6 +132,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8e32ccf76dd114394bb9f35c197357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAmount: {x: -0.01, y: 0, z: 0}
+  moveAmount: {x: 0, y: 0}
   destroyBelowY: -100
   destroyBelowX: -10
+--- !u!114 &9828251596032786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5637268971183097911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eaff930f3f5e394eb8b8f7ee76bc421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockXPosition: 0
+  lockYPosition: 0
+  lockZPosition: 0
+  lockXRotation: 1
+  lockYRotation: 1
+  lockZRotation: 1

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1456740724976895393}
   - component: {fileID: 8483055847511486484}
   - component: {fileID: 6002182059787504907}
+  - component: {fileID: -1797682007722279850}
+  - component: {fileID: 5726420666103240227}
   m_Layer: 0
   m_Name: FallingPepperoni
   m_TagString: Painful
@@ -98,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8e32ccf76dd114394bb9f35c197357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAmount: {x: 0, y: -0.05, z: 0}
+  moveAmount: {x: 0, y: -0.05}
   destroyBelowY: -8
   destroyBelowX: -100
 --- !u!58 &6002182059787504907
@@ -111,9 +113,48 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.77
+--- !u!50 &-1797682007722279850
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456740724976895398}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5726420666103240227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456740724976895398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eaff930f3f5e394eb8b8f7ee76bc421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockXPosition: 0
+  lockYPosition: 0
+  lockZPosition: 0
+  lockXRotation: 1
+  lockYRotation: 1
+  lockZRotation: 1
