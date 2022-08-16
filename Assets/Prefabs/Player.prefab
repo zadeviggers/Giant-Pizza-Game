@@ -103,7 +103,9 @@ MonoBehaviour:
   maxHealth: 8
   health: 5
   walkSpeed: 4500
-  jumpSpeed: 500
+  jumpSpeed: 250
+  collisionExplosionRadius: 20
+  collisionExplosionForce: 100
 --- !u!50 &8354973527394239252
 Rigidbody2D:
   serializedVersion: 4

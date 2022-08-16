@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8e32ccf76dd114394bb9f35c197357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAmount: {x: 0, y: -0.1, z: 0}
+  moveAmount: {x: 0, y: -0.05, z: 0}
   destroyBelowY: -8
   destroyBelowX: -100
 --- !u!58 &-6596618342601397539

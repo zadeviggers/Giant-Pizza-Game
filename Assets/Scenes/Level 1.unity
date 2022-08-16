@@ -534,7 +534,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GiantBall
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6271372736416622061, guid: 242082a21294b4e45b29d9222ff33012, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 242082a21294b4e45b29d9222ff33012, type: 3}
 --- !u!1001 &6325056936795934162
 PrefabInstance:

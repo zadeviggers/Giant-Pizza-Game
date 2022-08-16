@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     // Variables set in Unity editor UI
     public float walkSpeed;
     public float jumpSpeed;
+    public float collisionExplosionRadius;
+    public float collisionExplosionForce;
 
     // Components
     private Rigidbody2D rb;
@@ -65,6 +67,16 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        HandleCollision(other);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        HandleCollision(other.collider);
+    }
+
+    void HandleCollision(Collider2D other)
+    {
         if (other.CompareTag("Painful"))
         {
             Destroy(other.gameObject);
@@ -78,13 +90,12 @@ public class PlayerController : MonoBehaviour
             HealDamage();
             return;
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.collider.CompareTag("VeryPainful"))
+        if (other.CompareTag("VeryPainful"))
         {
             TakeDamage(2);
+            Vector2 direction = -rb.velocity;
+            float wearoff = 1 - (direction.magnitude / collisionExplosionRadius);
+            rb.AddForce(direction.normalized * collisionExplosionForce * wearoff, ForceMode2D.Impulse);
             return;
         }
     }

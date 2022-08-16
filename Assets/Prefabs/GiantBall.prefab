@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6271372736416622063}
   - component: {fileID: 6271372736416622061}
   - component: {fileID: 6271372736416622066}
+  - component: {fileID: 9207583168678568451}
   m_Layer: 0
   m_Name: GiantBall
   m_TagString: VeryPainful
@@ -99,8 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAmount: -60
-  collisionExplosionRadius: 20
-  collisionExplosionForce: 100
 --- !u!58 &6271372736416622066
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -117,3 +116,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.95
+--- !u!114 &9207583168678568451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271372736416622062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615e8f2cf9bd94b7abca27273d5b7d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: -60

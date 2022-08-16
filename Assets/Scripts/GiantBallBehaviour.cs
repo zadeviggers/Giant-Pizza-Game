@@ -7,9 +7,6 @@ public class GiantBallBehaviour : MonoBehaviour
     public float rotationAmount;
     private Vector3 rotation;
 
-    public float collisionExplosionRadius;
-    public float collisionExplosionForce;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +17,5 @@ public class GiantBallBehaviour : MonoBehaviour
     void Update()
     {
         transform.Rotate(rotation * Time.deltaTime);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        if (!rb) return;
-        Vector2 direction = -rb.velocity;
-        float wearoff = 1 - (direction.magnitude / collisionExplosionRadius);
-        rb.AddForce(direction.normalized * collisionExplosionForce * wearoff, ForceMode2D.Impulse);
     }
 }
