@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput < 0) horizontalMovement = horizontalMovement * -1;
 
         float verticalMovement = 0;
-        Debug.Log(IsGrounded());
         if (verticalInput > 0 && IsGrounded()) verticalMovement = jumpSpeed;
 
         Vector2 movement = new Vector2(horizontalMovement, verticalMovement);
