@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6271372736416622061}
   - component: {fileID: 6271372736416622066}
   - component: {fileID: 9207583168678568451}
+  - component: {fileID: -5896255967422360386}
   m_Layer: 0
   m_Name: GiantBall
   m_TagString: VeryPainful
@@ -129,3 +130,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAmount: -60
+--- !u!114 &-5896255967422360386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271372736416622062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed19e1e4c53f53499a75215298438e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

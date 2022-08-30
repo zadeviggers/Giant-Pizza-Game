@@ -7,9 +7,6 @@ public class MovingObstacleBehavior : MonoBehaviour
     // Set in inspector
     public Vector2 moveAmount;
     public float destroyBelowY = -100;
-    public float destroyBelowX = -100;
-
-
 
     // Constants
     Vector2 moveLeftAmount = new Vector2(-0.01f, 0);
@@ -24,7 +21,7 @@ public class MovingObstacleBehavior : MonoBehaviour
 
         transform.Translate(moveAmount + moveLeftAmount);
 
-        if (transform.position.y < destroyBelowY || transform.position.x < destroyBelowX)
+        if (transform.position.y < destroyBelowY)
         {
             Destroy(gameObject);
         }

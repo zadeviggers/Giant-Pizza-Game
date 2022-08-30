@@ -7,7 +7,6 @@ public class BackgroundScroller : MonoBehaviour
     public GameObject[] layers;
     private Camera mainCamera;
     private Vector2 screenBounds;
-
     public float choke;
 
     private void Start()

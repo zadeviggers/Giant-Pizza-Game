@@ -73,7 +73,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 12.25, y: 2.8076482}
+  m_Offset: {x: 7.938382, y: 2.8076482}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -84,7 +84,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 13.138854}
+  m_Size: {x: 1.0000019, y: 13.138854}
   m_EdgeRadius: 0
 --- !u!61 &3248827702666157927
 BoxCollider2D:
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3, y: 9.53}
+  m_Offset: {x: 0.70658636, y: 9.53}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19, y: 1}
+  m_Size: {x: 14.413171, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &3248827703198875445
 GameObject:
@@ -179,6 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3248827704151581040}
+  - component: {fileID: -4903519204007799280}
   m_Layer: 0
   m_Name: LevelBoundries
   m_TagString: Untagged
@@ -203,3 +204,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4903519204007799280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3248827704151581041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed19e1e4c53f53499a75215298438e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
