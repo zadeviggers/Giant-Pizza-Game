@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0caac090f98494073b4968c170e3bdf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 8
-  health: 8
+  maxHealth: 10
+  health: 10
   walkSpeed: 4500
   jumpSpeed: 250
   collisionExplosionRadius: 20
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.000000059604645}
+  m_Offset: {x: -0.028640538, y: 0.014320254}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -154,7 +154,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8893806, y: 2.5724452}
+  m_Size: {x: 1.3476298, y: 3.002053}
   m_EdgeRadius: 0
 --- !u!114 &5249498354616691994
 MonoBehaviour:
@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3840425538626534212, guid: c2d8354e127a81e4a80f583e05309f4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.52
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3840425538626534212, guid: c2d8354e127a81e4a80f583e05309f4c, type: 3}
       propertyPath: m_LocalPosition.z

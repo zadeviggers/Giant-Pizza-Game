@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
 
     // Components
     private Rigidbody2D rb;
-    private new Collider2D collider;
 
     // Other controller scripts
     HealthBar healthBar;
@@ -32,7 +31,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
 
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
 
