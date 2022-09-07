@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     // Other controller scripts
     HealthBar healthBar;
 
+    // GameManager instance
+    GameManager gameManager;
 
     // Layer mask for ground
     int GroundMask;
@@ -35,6 +37,8 @@ public class PlayerController : MonoBehaviour
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
 
         GroundMask = 1 << LayerMask.NameToLayer("Ground");
+
+        gameManager = GameManager.GetGameManager();
     }
 
     // Update is called once per frame
@@ -116,7 +120,6 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
+        gameManager.Lose();
     }
 }

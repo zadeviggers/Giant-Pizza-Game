@@ -1,9 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public enum GameState
+{
+    Starting,
+    Menu,
+    Playing,
+    GameOver
+}
 
 public class GameManager : MonoBehaviour
 {
+    public GameState currentState = GameState.Starting;
+    public int score = 69;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +42,43 @@ public class GameManager : MonoBehaviour
         // THERE CAN ONLY BE ONE!!
         if (notFirst == true) Destroy(gameObject);
         else DontDestroyOnLoad(gameObject);
+
+        currentState = GameState.Menu;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Static method for other scripts to load the GameManager instance
+    public static GameManager GetGameManager()
     {
-        
+        GameObject gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
+        Debug.Log(gameManagerObject);
+        GameManager gameManagerComponent = gameManagerObject.GetComponent<GameManager>();
+        Debug.Log(gameManagerComponent);
+
+        return gameManagerComponent;
+    }
+
+    public string GetFormattedScore()
+    {
+        return score.ToString("D3");
+    }
+
+    public void GoToMenu() {
+        Debug.Log("Loading menu");
+        currentState = GameState.Menu;
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void StartGame()
+    {
+        Debug.Log("Starting game...");
+        currentState = GameState.Playing;
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void Lose()
+    {
+        Debug.Log("Game lost");
+        currentState = GameState.GameOver;
+        SceneManager.LoadScene("Game Over");
     }
 }

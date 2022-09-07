@@ -9,6 +9,7 @@ TagManager:
   - VeryPainful
   - HealthBar
   - Deadly
+  - GameManager
   layers:
   - Default
   - TransparentFX
