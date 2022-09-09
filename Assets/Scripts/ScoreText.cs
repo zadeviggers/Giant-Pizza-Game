@@ -15,7 +15,7 @@ public class ScoreText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get game manager
+        // Get the game manager instance
         gameManager = GameManager.GetGameManager();
 
         // Get TextMeshPro component

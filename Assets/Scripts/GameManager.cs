@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         if (notFirst == true) Destroy(gameObject);
         else DontDestroyOnLoad(gameObject);
 
-        currentState = GameState.Menu;
+        currentState = GameState.GameOver;
     }
 
     // Static method for other scripts to load the GameManager instance
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     public string GetFormattedScore()
     {
-        return score.ToString("D3");
+        return $"{score:000}";
     }
 
     public void GoToMenu() {
