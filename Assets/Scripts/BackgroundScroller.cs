@@ -8,6 +8,7 @@ public class BackgroundScroller : MonoBehaviour
     private Camera mainCamera;
     private Vector2 screenBounds;
     public float choke;
+    int counter = 0;
 
     private void Start()
     {
@@ -64,10 +65,13 @@ public class BackgroundScroller : MonoBehaviour
                 firstChild.transform.SetAsLastSibling();
                 // Use Vector3 here instead of Vector2 to preserve background layering
                 firstChild.transform.position = new Vector3(lastChild.transform.position.x + halfObjectWidth * 2, lastChild.transform.position.y, lastChild.transform.position.z);
-            } else if (transform.position.x - screenBounds.x < firstChild.transform.position.x - halfObjectWidth)
+            }
+            else if (transform.position.x - screenBounds.x < firstChild.transform.position.x - halfObjectWidth)
             {
                 lastChild.transform.SetAsFirstSibling();
                 lastChild.transform.position = new Vector3(firstChild.transform.position.x - halfObjectWidth * 2, firstChild.transform.position.y, firstChild.transform.position.z);
+                counter += 1;
+                if (counter % 2 != 0) lastChild.transform.localScale = new Vector3(lastChild.transform.localScale.x * -1, lastChild.transform.localScale.y, lastChild.transform.localScale.z);
             }
         }
     }

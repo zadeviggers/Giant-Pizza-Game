@@ -14,7 +14,7 @@ public enum GameState
 public class GameManager : MonoBehaviour
 {
     public GameState currentState = GameState.Starting;
-    public int score = 69;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +43,17 @@ public class GameManager : MonoBehaviour
         if (notFirst == true) Destroy(gameObject);
         else DontDestroyOnLoad(gameObject);
 
-        currentState = GameState.GameOver;
+        currentState = GameState.Menu;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (currentState == GameState.Playing)
+        {
+            score += 1;
+        }
+        Debug.Log($"Score: {score}, GameState: {currentState}");
     }
 
     // Static method for other scripts to load the GameManager instance
@@ -59,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     public string GetFormattedScore()
     {
-        return $"{score:000}";
+        return $"{score}";
     }
 
     public void GoToMenu() {
@@ -71,6 +81,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Starting game...");
+        score = 0;
         currentState = GameState.Playing;
         SceneManager.LoadScene("Level 1");
     }
