@@ -67,8 +67,6 @@ public class PlayerController : MonoBehaviour
         // Apply movement
         rb.AddForce(movement);
 
-        Debug.Log($"{grounded}, {rb.velocity.y}");
-
         // Update animator
         animator.SetFloat("YVelocity", rb.velocity.y);
         animator.SetFloat("XVelocity", rb.velocity.x);

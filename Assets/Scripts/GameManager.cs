@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
         {
             score += 1;
         }
-        //Debug.Log($"Score: {score}, GameState: {currentState}");
+
+        Debug.Log($"Score: {score}, GameState: {currentState}");
     }
 
     // Static method for other scripts to load the GameManager instance
