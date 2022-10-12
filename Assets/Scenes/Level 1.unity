@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720738443122369898, guid: f7319662c641fac4baf793a7ed60296f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6
+      value: 5.72
       objectReference: {fileID: 0}
     - target: {fileID: 3720738443122369898, guid: f7319662c641fac4baf793a7ed60296f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: 3720738443122369898, guid: f7319662c641fac4baf793a7ed60296f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -420,6 +420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5735335344467474674, guid: 7dd77ed91fb13463789c6ba1409681c2, type: 3}
+      propertyPath: spawnWidth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6325056937122969080, guid: 7dd77ed91fb13463789c6ba1409681c2, type: 3}
       propertyPath: m_Name
       value: FallingObstacleSpawner
@@ -430,7 +434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325056937122969081, guid: 7dd77ed91fb13463789c6ba1409681c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.44
+      value: 14.85
       objectReference: {fileID: 0}
     - target: {fileID: 6325056937122969081, guid: 7dd77ed91fb13463789c6ba1409681c2, type: 3}
       propertyPath: m_LocalPosition.y

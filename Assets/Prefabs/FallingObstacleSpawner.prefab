@@ -57,11 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9128748580138572089, guid: 24f4c5f619fbaf642b9b33554c150a2b, type: 3}
       propertyPath: spawnWidth
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9128748580138572089, guid: 24f4c5f619fbaf642b9b33554c150a2b, type: 3}
       propertyPath: spawnInterval
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9128748580138572089, guid: 24f4c5f619fbaf642b9b33554c150a2b, type: 3}
       propertyPath: thingsToSpawn.Array.size
