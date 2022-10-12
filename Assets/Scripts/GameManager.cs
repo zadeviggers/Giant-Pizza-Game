@@ -55,16 +55,14 @@ public class GameManager : MonoBehaviour
         {
             score += 1;
         }
-        Debug.Log($"Score: {score}, GameState: {currentState}");
+        //Debug.Log($"Score: {score}, GameState: {currentState}");
     }
 
     // Static method for other scripts to load the GameManager instance
     public static GameManager GetGameManager()
     {
         GameObject gameManagerObject = GameObject.FindGameObjectWithTag("GameManager");
-        Debug.Log(gameManagerObject);
         GameManager gameManagerComponent = gameManagerObject.GetComponent<GameManager>();
-        Debug.Log(gameManagerComponent);
 
         return gameManagerComponent;
     }

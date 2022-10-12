@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
     public float collisionExplosionForce;
 
     // Components
-    private Rigidbody2D rb;
+    Rigidbody2D rb; // Used for movement
+    Animator animator; // Used for passing variables to animator
 
     // Other controller scripts
     HealthBar healthBar;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
 
@@ -44,26 +46,47 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Need to make sure to run this every tick to keep animation in sync
+        bool grounded = IsGrounded();
+
+        // Get movement input
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
+        // Running left & right
         float horizontalMovement = 0;
         if (horizontalInput != 0) horizontalMovement = Time.deltaTime * walkSpeed;
         if (horizontalInput < 0) horizontalMovement = horizontalMovement * -1;
 
+        // Jumping
         float verticalMovement = 0;
-        if (verticalInput > 0 && IsGrounded()) verticalMovement = jumpSpeed;
+        if (grounded && verticalInput > 0) verticalMovement = jumpSpeed;
 
         Vector2 movement = new Vector2(horizontalMovement, verticalMovement);
 
+        // Apply movement
         rb.AddForce(movement);
+
+        Debug.Log($"{grounded}, {rb.velocity.y}");
+
+        // Update animator
+        animator.SetFloat("YVelocity", rb.velocity.y);
+        animator.SetFloat("XVelocity", rb.velocity.x);
     }
 
 
     bool IsGrounded()
     {
+        // Raycast down
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2f, GroundMask);
-        return hit.collider != null;
+
+        // If it didn't hit anything, the player isn't grounded
+        bool grounded = hit.collider != null;
+
+        // Update animator
+        animator.SetBool("TouchingGround", grounded);
+
+        return grounded;
     }
 
     void OnTriggerEnter2D(Collider2D other)
