@@ -30,11 +30,13 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateHealthBar()
     {
+        // Remove old hearts
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
         }
 
+        // Maths for how many hearts of each type are needed
         float numberOfHearts = Mathf.Ceil(player.maxHealth / 2);
 
         bool needHalfHeart = player.health % 2 != 0;
@@ -45,7 +47,7 @@ public class HealthBar : MonoBehaviour
         // Create new children
         for (int i = 1; i <= numberOfHearts; i++)
         {
-            Vector2 position = new Vector2(i * imageSize, imageSize);
+            Vector2 position = new Vector2(i * imageSize + player.transform.position.x, imageSize + player.transform.position.y);
 
             Image newChild;
             if (i <= fullHearts)
