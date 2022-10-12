@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720738443122369898, guid: f7319662c641fac4baf793a7ed60296f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.7
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 3720738443122369898, guid: f7319662c641fac4baf793a7ed60296f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.1
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 3720738443122369898, guid: f7319662c641fac4baf793a7ed60296f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -302,10 +302,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1363251088180870992, guid: df02f9e00e4a24ff780b7c3e7b960373, type: 3}
-      propertyPath: choke
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1363251088180870992, guid: df02f9e00e4a24ff780b7c3e7b960373, type: 3}
       propertyPath: layers.Array.data[0]
       value: 

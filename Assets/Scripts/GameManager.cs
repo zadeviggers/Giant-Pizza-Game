@@ -43,7 +43,9 @@ public class GameManager : MonoBehaviour
         if (notFirst == true) Destroy(gameObject);
         else DontDestroyOnLoad(gameObject);
 
-        currentState = GameState.Menu;
+        // If the level was loaded directly in the unity editor rather than going through the menu
+        if(SceneManager.GetActiveScene().name.StartsWith("Level")) currentState = GameState.Playing;
+        else currentState = GameState.Menu;
     }
 
     // Update is called once per frame
