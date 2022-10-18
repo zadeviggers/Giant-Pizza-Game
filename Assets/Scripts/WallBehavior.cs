@@ -7,38 +7,48 @@ public class WallBehavior : MonoBehaviour
     // The particle system to use to create the indicator particles
     public ParticleSystem collisionParticles;
 
-    // The places to show the particles
-    private BoxCollider2D[] colliders;
+    int collisionParticleSystemAmount = 20;
+
+    bool playerTouching = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        // Get colliders
-        colliders = GetComponents<BoxCollider2D>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (playerTouching)
         {
             CreateBoundryParticles();
         }
     }
 
-    void CreateBoundryParticles() { 
-        // Create a particle system for each wall
-        foreach (BoxCollider2D collider in colliders)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerTouching = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerTouching = false;
+        }
+    }
+
+    void CreateBoundryParticles()
+    {
+        for (int i = 0; i < collisionParticleSystemAmount; i++)
         {
             // Instantiate particle system
             ParticleSystem system = Instantiate(collisionParticles);
 
-            // Change it's shape to match the wall
-            
-
             ParticleSystem.ShapeModule shape = system.shape;
+            shape.enabled = true;
             shape.shapeType = ParticleSystemShapeType.Rectangle;
-            //shape.scale;
-
+            shape.scale = transform.localScale;
+            shape.position = transform.position;
         }
+
     }
 }
