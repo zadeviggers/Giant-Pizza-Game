@@ -20,4 +20,9 @@ public class GameManagerProxy : MonoBehaviour
     {
         gameManager.StartGame();
     }
+
+    public void QuitGame()
+    {
+        gameManager.QuitGame();
+    }
 }

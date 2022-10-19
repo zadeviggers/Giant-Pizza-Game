@@ -93,4 +93,9 @@ public class GameManager : MonoBehaviour
         currentState = GameState.GameOver;
         SceneManager.LoadScene("Game Over");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
