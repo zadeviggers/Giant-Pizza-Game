@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GiantBallBehaviour : MonoBehaviour
+public class SpinBehaviour : MonoBehaviour
 {
     public float rotationAmount;
     private Vector3 rotation;
